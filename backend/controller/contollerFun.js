@@ -150,7 +150,7 @@ const updateProduct= async (req,res)=>{
 }
 
 const deleteProduct= async (req,res)=>{
-    const id=req.param;
+    const id=req.params;
 
     try{
 
