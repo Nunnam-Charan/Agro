@@ -150,11 +150,11 @@ const updateProduct= async (req,res)=>{
 }
 
 const deleteProduct= async (req,res)=>{
-    const id=req.params;
+    const {id}=req.params;
 
     try{
 
-        await itemDetails.deleteOne({id});
+        await itemDetails.deleteOne({_id:id});
         res.json({message:'product deleted success fully'});
     }
     catch(error){
